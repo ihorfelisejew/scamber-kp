@@ -1,0 +1,803 @@
+@import url('../reset.css');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #dddeeb;
+}
+
+[class*="__container"] {
+    max-width: 1210px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: -10px 0 15px -10px rgba(189, 190, 196, 0.5), 10px 0 10px -10px rgba(189, 190, 196, 0.5);
+}
+
+@media (max-width: 1439.98px) {
+    [class*="__container"] {
+        max-width: 1130px;
+    }
+}
+
+@media (max-width: 1280px) {
+    [class*="__container"] {
+        max-width: 1020px;
+    }
+}
+
+@media (max-width: 1120px) {
+    [class*="__container"] {
+        max-width: 920px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        padding: 0px 15px;
+        max-width: 100%;
+    }
+}
+
+
+
+.admin__page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin__header {
+    width: 100%;
+    overflow: hidden;
+    height: 60px;
+    background-color: #dddeeb;
+}
+
+.admin__menu {
+    width: 100%;
+    height: 70px;
+}
+
+.menu__list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.menu__item {
+    border: 1px solid #e1e2f5;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    background-color: #eeeff6;
+    outline: none;
+}
+
+.menu__item:hover {
+    background-color: #dddeeb;
+}
+
+.menu__link {
+    text-align: center;
+    color: #090c6a;
+}
+
+.menu__item.menu__active {
+    border-bottom: none;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*------content-----*/
+/*----------------------------------------------------------------------*/
+.content__container {
+    height: 100%;
+}
+
+.content__profile {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 91.2vh;
+}
+
+.main__information {
+    flex: 0 0 22%;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+.main-inform__image-block {
+    width: 100%;
+    text-align: center;
+}
+
+.main-inform__image-block img {
+    width: 80%;
+
+}
+
+.name__last-name {
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.main-info__item {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #090c6a;
+    border-radius: 50%;
+    padding: 5px 5.2px;
+    margin-top: 3px;
+}
+
+.showroom-name__text {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.position__text {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.showroom-name__text span,
+.position__text span {
+    font-weight: 600;
+}
+
+.showroom__contact-text {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.detail {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.detail__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.detail-info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-info__title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.detail-info__text {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.detail-auth-info__input {
+    margin-left: 10px;
+    color: #090c6a;
+    padding: 10px 15px;
+    margin-left: 20px;
+    border: 1px solid #090c6a;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.detail-auth-info__submit {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    margin: 20px auto 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.detail-auth-info__submit:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.delete__button {
+    width: 250px;
+    padding: 10px;
+    color: #b10909;
+    border: 1px solid #b10909;
+    background-color: #fff;
+    margin: 20px auto 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+    margin-top: 155px;
+}
+
+.delete__button:hover {
+    color: #fff;
+    background-color: #b10909;
+}
+
+
+/*----------------------------------------------------------------------*/
+/*------orders-----*/
+/*----------------------------------------------------------------------*/
+.content__orders {
+    padding: 20px;
+    display: block;
+}
+
+.order__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0px 30px 40px;
+}
+
+.orders__table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+    margin-bottom: 40px;
+}
+
+.form__separator {
+    width: 100%;
+    height: 4px;
+    background-color: #d1d2eb;
+    border-radius: 3px;
+}
+
+.orders__titles,
+.orders__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0%;
+}
+
+.orders__titles {
+    padding-left: 40px;
+}
+
+.order__column-item,
+.orders__column-title {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.order__check-block {
+    width: 40px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.order__check-confirm {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.orders__column-title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.order__column-item {
+    height: 70px;
+}
+
+.order__column-item.contacts {
+    overflow-x: auto;
+}
+
+.order__column-item.contacts::-webkit-scrollbar {
+    height: 6px;
+}
+
+.order__column-item.contacts::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+
+.order__column-item.contacts::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.details {
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.details::-webkit-scrollbar {
+    width: 6px;
+}
+
+.details::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+
+.details::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.order-table__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 600px;
+    padding-top: 25px;
+}
+
+.orders__confirm {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.orders__confirm:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.orders__delete {
+    width: 250px;
+    padding: 10px;
+    color: #b10909;
+    border: 1px solid #b10909;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.orders__delete:hover {
+    color: #fff;
+    background-color: #b10909;
+}
+
+
+
+.unconfirmed__null {
+    font-size: 20px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+/*----------------------------------------------------------------------*/
+/*------cars-sells-orders-----*/
+/*----------------------------------------------------------------------*/
+.cars__table {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 40px;
+}
+
+.table__content {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+.cars__titles,
+.car__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0%;
+}
+
+.cars__titles {
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 150px) 250px;
+    grid-template-rows: 1fr;
+}
+
+.car__info-block {
+    display: grid;
+    grid-template-columns: repeat(12, 150px) 250px;
+    grid-template-rows: 1fr;
+}
+
+.car__column-item,
+.cars__column-title {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: 400;
+    height: 70px;
+}
+
+.car__column-item:last-child {
+    text-align: start;
+}
+
+.cars__column-title {
+    font-weight: 600;
+    text-align: center;
+    height: 40px;
+}
+
+.car__row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    height: 70px;
+}
+
+.car__check-block {
+    width: 40px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.car__check-confirm {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.overflow__x {
+    overflow-x: auto;
+}
+
+.overflow__x::-webkit-scrollbar {
+    height: 10px;
+    padding: 5px;
+}
+
+.overflow__x::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+
+.overflow__x::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+/*----------------------------------------------------------------------*/
+/*------contracts-history-----*/
+/*----------------------------------------------------------------------*/
+.content__contracts {
+    padding: 20px;
+    display: block;
+    height: 91.2vh;
+}
+
+.contracts__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0px 30px 40px
+}
+
+.dates__form {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 60px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dates__block {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.contracts-date__input {
+    font-size: 20px;
+}
+
+.contracts-date__search {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.contracts-date__search:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.contracts__table {
+    margin: 0px 20px;
+    width: 95%;
+    display: grid;
+    flex-direction: column;
+    overflow-x: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 400px;
+}
+
+.contracts__row {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 220px) 300px repeat(2, 200px);
+    width: 100%;
+}
+
+.contracts__row.titles {
+    grid-template-columns: repeat(4, 220px) 300px repeat(2, 200px);
+    padding-left: 40px;
+}
+
+.contracts__row p {
+    border: 1px solid #000;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.contracts__row.titles {
+    font-size: 18px;
+}
+
+.contracts__check-block {
+    width: 40px;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.contract__check-confirm {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.contract-table__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 600px;
+    padding-top: 15px;
+    margin-left: 40px;
+}
+
+.change__contract {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.change__contract:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.contract__delete {
+    width: 250px;
+    padding: 10px;
+    color: #b10909;
+    border: 1px solid #b10909;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.contract__delete:hover {
+    color: #fff;
+    background-color: #b10909;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*------clients-----*/
+/*----------------------------------------------------------------------*/
+.content__clients {
+    padding: 20px;
+    display: block;
+    height: 91.2vh;
+}
+
+.clients__table {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 40px;
+    height: 470px;
+}
+
+.clients__titles,
+.client__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0%;
+}
+
+.clients__titles {
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px) 250px 200px 150px 200px;
+    grid-template-rows: 1fr;
+}
+
+.client__info-block {
+    display: grid;
+    grid-template-columns: repeat(3, 200px) 250px 200px 150px 200px;
+    grid-template-rows: 1fr;
+}
+
+.client__column-item,
+.clients__column-title {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: 400;
+    height: 70px;
+}
+
+.client__column-item:last-child {
+    text-align: start;
+}
+
+.clients__column-title {
+    font-weight: 600;
+    text-align: center;
+    height: 50px;
+}
+
+.client__row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    height: 70px;
+}
+
+.client__check-block {
+    width: 40px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.client__check-confirm {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*------add-admin-----*/
+/*----------------------------------------------------------------------*/
+.content__add-admin {
+    padding: 20px;
+    display: block;
+    height: 91.2vh;
+}
+
+.add-admin__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding: 30px 25px;
+    border: 1px solid #090c6a;
+    border-radius: 15px;
+}
+
+.select__worker,
+.add-admin__input {
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #090c6a;
+    border-radius: 10px;
+}
+
+.add-admin__input::placeholder{
+    color: #9D9DFF;
+}
+
+.add-admin__button {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+    margin: 0 auto;
+}
+
+.add-admin__button:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+
+.non-active__content {
+    display: none;
+}

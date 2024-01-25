@@ -1,0 +1,682 @@
+@import url('../reset.css');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+[class*="__container"] {
+    max-width: 1210px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1439.98px) {
+    [class*="__container"] {
+        max-width: 1130px;
+    }
+}
+
+@media (max-width: 1280px) {
+    [class*="__container"] {
+        max-width: 1020px;
+    }
+}
+
+@media (max-width: 1120px) {
+    [class*="__container"] {
+        max-width: 920px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        padding: 0px 15px;
+        max-width: 100%;
+    }
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*------header-----*/
+/*----------------------------------------------------------------------*/
+.header {
+    border-bottom: 2px solid #11158b;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    width: 40px;
+}
+
+.main__logo-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu__link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    position: relative;
+}
+
+.menu__link.menu__active {
+    font-weight: 700;
+}
+
+.menu__link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.5s ease 0s;
+}
+
+.menu__link.menu__active::before,
+.menu__link:not(:has(.menu__active)):hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(1);
+}
+
+
+/*----------------------------------------------------------------------*/
+/*------profile-----*/
+/*----------------------------------------------------------------------*/
+.profile__container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 91.2vh;
+}
+
+.main__information {
+    flex: 0 0 22%;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+
+.main-inform__image-block {
+    width: 100%;
+    text-align: center;
+}
+
+.main-inform__image-block img {
+    width: 80%;
+
+}
+
+.name__last-name {
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.main-info__item {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #090c6a;
+    border-radius: 50%;
+    padding: 5px 5.2px;
+    margin-top: 3px;
+}
+
+.showroom-name__text {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.position__text {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.showroom-name__text span,
+.position__text span {
+    font-weight: 600;
+}
+
+.showroom__contact-text {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.detail {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.detail__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.detail-info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detail-info__title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.detail-info__text {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.detail-auth-info__input {
+    margin-left: 10px;
+    color: #090c6a;
+    padding: 10px 15px;
+    margin-left: 20px;
+    border: 1px solid #090c6a;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.detail-auth-info__submit {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    margin: 20px auto 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.detail-auth-info__submit:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.delete__button {
+    width: 250px;
+    padding: 10px;
+    color: #b10909;
+    border: 1px solid #b10909;
+    background-color: #fff;
+    margin: 20px auto 0px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+    margin-top: 155px;
+}
+
+.delete__button:hover {
+    color: #fff;
+    background-color: #b10909;
+}
+
+/*----------------------------------------------------------------------*/
+/*------order block-----*/
+/*----------------------------------------------------------------------*/
+.order__block {
+    padding: 90px 0px;
+    background-color: #EDEEFF;
+}
+
+.order__form-block {
+    margin: 0px auto;
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid #1B22CD;
+    background: #FFF;
+    padding: 25px 35px 40px;
+}
+
+.form__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.order__name-input,
+.order__last-name-input,
+.order__contact-data {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #9D9DFF;
+    background: #FFF;
+    padding: 15px;
+    color: #11158b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order__name-input {
+    grid-area: name;
+}
+
+.order__last-name-input {
+    grid-area: last__name;
+}
+
+.order__contact-data {
+    grid-area: contact__data;
+}
+
+.order__message {
+    grid-area: message;
+    resize: none;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #9D9DFF;
+    background: #FFF;
+    padding: 15px 22px;
+    color: #11158b;
+    font-size: 13px;
+    font-weight: 600;
+    height: 116px;
+}
+
+
+
+.order-name__label,
+.order-contact-type__label {
+    text-align: start;
+    display: none;
+    width: 95%;
+    margin: 0 auto 10px;
+    z-index: -1;
+    font-weight: 200;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+.order__label {
+    font-size: 20px;
+    font-weight: 700;
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order__form-content {
+    display: grid;
+    grid-template-areas: "body_type manufacture car_model"
+        "car_price year_manufacture car_color"
+        "engine_type engine_capacity fuel_consumption"
+        "car_mileage gearbox drive"
+        "complete_set car_number vin_code"
+        "other_desc other_desc other_desc"
+        "submit submit submit";
+    column-gap: 70px;
+    row-gap: 20px;
+}
+
+.order__select-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.order__select {
+    color: #9D9DFF;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #9D9DFF;
+    background: #FFF;
+    cursor: pointer;
+    width: 100%;
+}
+
+.body__type {
+    grid-area: body_type;
+}
+
+.manufacture {
+    grid-area: manufacture;
+}
+
+.order__input {
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #9D9DFF;
+    background: #FFF;
+    padding: 15px;
+    color: #11158b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.car__price {
+    grid-area: car_price;
+}
+
+.car__model {
+    grid-area: car_model;
+}
+
+.year__manufacture {
+    grid-area: year_manufacture;
+}
+
+.complete__set {
+    grid-area: complete_set;
+}
+
+.car__color {
+    grid-area: car_color;
+}
+
+.engine__type {
+    grid-area: engine_type;
+}
+
+.engine__capacity {
+    grid-area: engine_capacity;
+}
+
+.fuel__consumption {
+    grid-area: fuel_consumption;
+}
+
+.car__mileage {
+    grid-area: car_mileage;
+}
+
+.gearbox {
+    grid-area: gearbox;
+}
+
+.drive {
+    grid-area: drive;
+}
+
+.car__number {
+    grid-area: car_number;
+}
+
+.vin__code {
+    grid-area: vin_code;
+}
+
+.other__desc {
+    grid-area: other_desc;
+    resize: none;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #9D9DFF;
+    background: #FFF;
+    padding: 15px 22px;
+    color: #11158b;
+    font-size: 13px;
+    font-weight: 600;
+    height: 116px;
+}
+
+.other__desc::placeholder,
+.order__input::placeholder {
+    color: #9D9DFF;
+}
+
+.order__button {
+    grid-area: submit;
+    width: 159px;
+    border-radius: 7px;
+    border: 1px solid #1B22CD;
+    background: #1B22CD;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.order__button:hover {
+    background: #fff;
+    color: #1B22CD;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*------order_status-----*/
+/*----------------------------------------------------------------------*/
+.order-status__block{
+    padding: 100px 0px;
+}
+.order-status__content{
+    width: 100%;
+    overflow: hidden;
+}
+.cars__table {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.order__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0px 30px 40px;
+}
+
+.table__content {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+.cars__titles,
+.car__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0%;
+}
+
+.cars__titles {
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(13, 150px) 250px;
+    grid-template-rows: 1fr;
+}
+
+.car__info-block {
+    display: grid;
+    grid-template-columns: repeat(13, 150px) 250px;
+    grid-template-rows: 1fr;
+}
+
+.car__column-item,
+.cars__column-title {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: 400;
+    height: 70px;
+}
+
+.car__column-item:last-child {
+    text-align: start;
+}
+
+.cars__column-title {
+    font-weight: 600;
+    text-align: center;
+    height: 50px;
+}
+
+.car__row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    height: 70px;
+}
+
+.car__check-block {
+    width: 40px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+.car__check-confirm {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.overflow__x {
+    overflow-x: auto;
+}
+
+.overflow__x::-webkit-scrollbar {
+    height: 10px;
+    padding: 5px;
+}
+
+.overflow__x::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+
+.overflow__x::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.details {
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.details::-webkit-scrollbar {
+    width: 6px;
+}
+
+.details::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+
+.details::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.order-table__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 600px;
+    padding-top: 25px;
+}
+
+.orders__confirm {
+    width: 250px;
+    padding: 10px;
+    color: #090c6a;
+    border: 1px solid #090c6a;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.orders__confirm:hover {
+    color: #fff;
+    background-color: #090c6a;
+}
+
+.orders__delete {
+    width: 250px;
+    padding: 10px;
+    color: #b10909;
+    border: 1px solid #b10909;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.orders__delete:hover {
+    color: #fff;
+    background-color: #b10909;
+}
